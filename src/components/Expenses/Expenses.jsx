@@ -5,7 +5,17 @@ import "./Expenses.css";
 function Expenses({ items }) {
   return (
     <Card className="expenses">
-      <ExpenseItem
+      {items.map((item) => {
+        return (
+          <ExpenseItem
+            key={item.id}
+            title={item.title}
+            amount={item.amount}
+            date={item.date}
+          />
+        );
+      })}
+      {/* <ExpenseItem
         title={items[0].title}
         amount={items[0].amount}
         date={items[0].date}
@@ -24,7 +34,7 @@ function Expenses({ items }) {
         title={items[3].title}
         amount={items[3].amount}
         date={items[3].date}
-      />
+      /> */}
     </Card>
   );
 }
