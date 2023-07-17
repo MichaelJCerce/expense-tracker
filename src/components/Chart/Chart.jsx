@@ -2,7 +2,7 @@ import ChartBar from "./ChartBar";
 import "./Chart.css";
 
 const Chart = (props) => {
-  const total = props.dataPoints
+  const totalExpenses = props.dataPoints
     .map((datapoint) => datapoint.value)
     .reduce((sum, term) => sum + term);
 
@@ -12,7 +12,7 @@ const Chart = (props) => {
         <ChartBar
           key={dataPoint.label}
           value={dataPoint.value}
-          maxValue={total}
+          totalExpenses={totalExpenses}
           label={dataPoint.label}
         />
       ))}
