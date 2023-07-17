@@ -54,10 +54,11 @@ const ExpenseForm = (props) => {
     setTitle("");
     setAmount("");
     setDate("");
+    console.log(expenseData);
   };
 
   return (
-    <form onSubmit={submitHandler} action="#">
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label htmlFor="title">Title</label>
@@ -92,7 +93,10 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button>Add Expense</button>
+        <button type="button" onClick={props.displayForm}>
+          Cancel
+        </button>
+        <button type="submit">Add Expense</button>
       </div>
     </form>
   );
