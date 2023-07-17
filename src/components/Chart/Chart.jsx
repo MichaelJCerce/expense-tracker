@@ -5,7 +5,7 @@ const Chart = (props) => {
   const total = props.dataPoints
     .map((datapoint) => datapoint.value)
     .reduce((sum, term) => sum + term);
-  
+
   return (
     <div className="chart">
       {props.dataPoints.map((dataPoint) => (
