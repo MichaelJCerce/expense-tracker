@@ -1,9 +1,11 @@
-import ChartBar from "./CharBar";
+import ChartBar from "./ChartBar";
 import "./Chart.css";
 
 const Chart = (props) => {
-    const total = props.dataPoints.map(datapoint => datapoint.value).reduce((sum, term) => sum + term);
-
+  const total = props.dataPoints
+    .map((datapoint) => datapoint.value)
+    .reduce((sum, term) => sum + term);
+  
   return (
     <div className="chart">
       {props.dataPoints.map((dataPoint) => (

@@ -3,19 +3,19 @@ import Chart from "../Chart/Chart";
 const ExpensesChart = (props) => {
   const chartDataPoints = [
     {
-      label: "January",
+      label: "Jan",
       value: 0,
     },
     {
-      label: "Febuary",
+      label: "Feb",
       value: 0,
     },
     {
-      label: "March",
+      label: "Mar",
       value: 0,
     },
     {
-      label: "April",
+      label: "Apr",
       value: 0,
     },
     {
@@ -23,31 +23,31 @@ const ExpensesChart = (props) => {
       value: 0,
     },
     {
-      label: "June",
+      label: "Jun",
       value: 0,
     },
     {
-      label: "July",
+      label: "Jul",
       value: 0,
     },
     {
-      label: "August",
+      label: "Aug",
       value: 0,
     },
     {
-      label: "September",
+      label: "Sep",
       value: 0,
     },
     {
-      label: "October",
+      label: "Oct",
       value: 0,
     },
     {
-      label: "November",
+      label: "Nov",
       value: 0,
     },
     {
-      label: "December",
+      label: "Dec",
       value: 0,
     },
   ];
