@@ -49,8 +49,15 @@ const ExpenseForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    const expenseData = { title, amount: +amount, date: new Date(date) };
+
+    const tempDate = new Date(date);
+    const fixedDate = new Date(
+      tempDate.getTime() + tempDate.getTimezoneOffset() * 60 * 1000
+    );
+
+    const expenseData = { title, amount: +amount, date: fixedDate };
     props.onSaveExpenseData(expenseData);
+    
     setTitle("");
     setAmount("");
     setDate("");
